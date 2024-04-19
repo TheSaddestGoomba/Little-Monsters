@@ -1,0 +1,434 @@
+[
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "feral_weapon_knife_shiv",
+    "cooldown": 1,
+    "move_cost": 65,
+    "accuracy": 1,
+    "//": "Feral child melee skill + average weapon's to hit, total of 3-2=1",
+    "damage_max_instance": [ { "damage_type": "cut", "amount": 9 } ],
+    "condition": { "and": [ { "not": { "u_has_effect": "maimed_arm" } }, { "not": { "u_has_effect": "disarmed" } } ] },
+    "hit_dmg_u": "%1$s stabs your %2$s with a knife!",
+    "hit_dmg_npc": "%1$s stabs <npcname>'s %2$s with a knife!",
+    "miss_msg_u": "%1$s tries to hit you, but you dodge!",
+    "miss_msg_npc": "%1$s tries to hit <npcname>, but they dodge!",
+    "no_dmg_msg_u": "%1$s stabs your %2$s without penetrating your armor.",
+    "no_dmg_msg_npc": "%1$s stabs <npcname>'s %2$s without penetrating their armor."
+  },
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "feral_child_death_drops_shiv",
+    "entries": [
+      {
+        "distribution": [
+          { "item": "pockknife", "prob": 20, "damage": [ 1, 3 ] },
+          { "item": "knife_swissarmy", "prob": 15, "damage": [ 1, 3 ] },
+          { "item": "knife_folding", "prob": 10, "damage": [ 2, 4 ] },
+          { "item": "knife_steak", "prob": 20, "damage": [ 1, 3 ] },
+          { "item": "screwdriver", "prob": 15, "damage": [ 1, 3 ] },
+          { "item": "scissors", "prob": 15, "damage": [ 1, 3 ] },
+          { "item": "office_letter_opener", "prob": 4, "damage": [ 2, 4 ] },
+          { "item": "scalpel", "prob": 1, "damage": [ 1, 3 ] }
+        ]
+      },
+      { "group": "default_zombie_children_clothes", "prob": 100, "damage": [ 0, 2 ] },
+      { "group": "child_items_pockets", "prob": 65 }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_CIVILIAN_CHILD",
+    "dynamic_line": "&You see this child's face and know it does not see yours.  Their expressions and mutterings tell of a great distance between you here, and their far distant daydreams.  In the past, professionals would have struggled to help this child; there is nothing that you can do.",
+    "responses": [
+      { "text": "You need to get to safety!", "topic": "TALK_CIVILIAN_CHILD_EVAC" },
+      { "text": "It's dangerous here, you need to come with me!", "topic": "TALK_CIVILIAN_CHILD_EVAC" },
+      { "text": "[Accept that you cannot help them.]", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_CIVILIAN_CHILD_EVAC",
+    "dynamic_line": "&The child's face turns to an expression of feral animal rage as it focuses for the first time on you.  They growl from their throat and chest like a wolf pup ready to use its fangs.  After a few breaths their attention drifts from you and back to daydreams.",
+    "responses": [ { "text": "[Back away.]", "topic": "TALK_DONE" } ]
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Hello?\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"You're just copying me, aren't you?\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"I got a round trip ticket.\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"I love you.\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Don't worry, it can't hurt us.\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Okay.\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Good.\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Great.\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Fantastic.\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Good morning.\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Good afternoon.\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Good evening.\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Good night.\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Good luck.\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Happy Birthday!\"",
+    "volume": 32
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"How long have you been here?\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"How many languages do you speak?\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"How much would you like?\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"See you later.\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"This place is like a maze.\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Mom, I miss you.\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Me go, you stay.\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"beep!\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"beep-beep-beep!\"",
+    "volume": 30
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"BEEP!\"",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"That creepy abandoned post-apocalyptic lab complex looks safe…\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Oi, dingus, you can't keep me in 'ere.\"",
+    "volume": 15
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Hey look, that one's carrying something.  Let's crack it open and steal it.\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "hysterical laughing.",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "growling.",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Stop where you are!\"",
+    "volume": 15
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"You are under arrest!\"",
+    "volume": 15
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"You have the right to remain silent!\"",
+    "volume": 15
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Hands in the air!\"",
+    "volume": 15
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"I AM FOODPERSON.  AND I BRING SUSTENANCE!\"",
+    "volume": 17
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"♪Eat at Foodplace.  ♫It is a place with food.♪\"",
+    "volume": 15
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"You need food, don't you?  Then come with me to FOODPLACE!!\"",
+    "volume": 15
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Wanna play with me?\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"You!\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Sing with me!\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"I love you!\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Please take me with you!\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"May I have a cookie?\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Let's play together!\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Time to play!\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Om nom nom!  Delicious!\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Are you my mommy?\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Oh, how fun!\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"You're my best friend!\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Heehee!\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Let's have fun!\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Let's have a tea party!\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"You're the best!\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"You shouldn't have done that.\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"I hate you.\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "AAAIEEEEEEE!",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"What did you do with my Mommy?\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Stay with me… forever!\"",
+    "volume": 10
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"BARK!\"",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"YAP!\"",
+    "volume": 30
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"WOOF!\"",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"Don't look at the sky!\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [ "mon_civilian_child_careless" ],
+    "sound": "\"I am not leaving without you!\"",
+    "volume": 25
+  }
+]

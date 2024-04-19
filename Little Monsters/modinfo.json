@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "Little_Monsters",
+    "name": "Little Monsters",
+    "authors": [ "TheSaddestGoomba" ],
+    "description": "Adds child variants of civilian and feral monsters.",
+    "category": "creatures",
+    "dependencies": [ "dda" ]
+  }
+]
